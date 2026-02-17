@@ -5,7 +5,7 @@
 namespace Mission6Assignment.Migrations
 {
     /// <inheritdoc />
-    public partial class takeThree : Migration
+    public partial class TakeTwo : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

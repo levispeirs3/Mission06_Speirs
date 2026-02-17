@@ -10,8 +10,8 @@ using Mission6Assignment.Models;
 namespace Mission6Assignment.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    [Migration("20260214052654_takeFour")]
-    partial class takeFour
+    [Migration("20260217162010_TakeTwo")]
+    partial class TakeTwo
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
