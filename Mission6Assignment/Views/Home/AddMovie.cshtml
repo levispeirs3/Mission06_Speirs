@@ -9,10 +9,17 @@
 
 <form method="post">
 
-    <label asp-for="Category"></label>
-    <input asp-for="Category" />
-    <br />
+    <input type="hidden" asp-for="MovieId" />
 
+    <select asp-for="CategoryId">
+        <option value="">Select a Category</option>
+        @foreach (var c in ViewBag.Categories)
+        {
+            <option value="@c.CategoryId">@c.CategoryName</option>
+        }
+    </select>
+    <br />
+    
     <label asp-for="Title"></label>
     <input asp-for="Title" />
     <br />
@@ -47,9 +54,20 @@
     <input asp-for="LentTo" />
     <br />
 
+    <label asp-for="CopiedToPlex"></label>
+    <select asp-for="CopiedToPlex">
+        <option value="">Select One</option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <br />
+
     <label asp-for="Notes"></label>
     <input asp-for="Notes" maxlength="25" />
     <br />
 
     <button type="submit">Add Movie</button>
+
+    <div asp-validation-summary="All"></div>
+
 </form>
